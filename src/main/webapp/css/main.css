@@ -1,0 +1,293 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+#opc {
+    color: black;
+}
+#label{
+	color:black;
+}
+
+/*TELA DE ERRO.*/
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+    box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.527);
+    border-radius: 10px;
+}
+
+.icon {
+    font-size: 100px;
+    color: red;
+    text-shadow: red 0 0 10px;
+}
+
+.botoes a {
+    text-decoration: none;
+    color: black;
+}
+
+.texto {
+    padding-bottom: 3rem;
+}
+
+.botoes button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: red;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.botoes button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid red;
+}
+
+.botoes button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+
+.botoes button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: red;
+}
+
+.botoes button:hover {
+    color: white;
+}
+
+.botoes button:active span::before {
+    background: #cd2727;
+}
+
+
+/*FIM TELA DE ERRO.*/
+
+
+/*TELA MENU*/
+
+.principal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.posts {
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    height: 80%;
+    padding: 1rem;
+}
+
+.titulo-menu h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.lista {
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), url("../img/lista2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cadastrar {
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), url("../img/cadastrar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn {
+    margin-bottom: 2rem;
+}
+
+.texto-menu {
+    width: 20rem;
+}
+
+.texto-menu p {
+    text-align: justify;
+    font-size: 13px;
+}
+
+.btn button {
+    width: 240px;
+    height: 95px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.btn button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn button:hover::before {
+    width: 100%;
+}
+
+.btn button:hover {
+    color: black;
+}
+
+.btn button:active:before {
+    background: #b9b9b9;
+}
+
+
+/*FIM TELA MENU*/
+
+
+/*TELA DE CADASTRO*/
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.suporte-form {
+    display: flex;
+    width: 30rem;
+    height: 32rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+.title-cadastro h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color:black;
+}
+
+.suporte-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.suporte-form input {
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #b9b9b9;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: Poppins;
+    outline: none;
+    color: black;
+    font-weight: 400;
+    transition: all 0.5s;
+    margin: 0.5rem;
+}
+.error {
+    border: 1px solid red;
+    background-color: rgba(255, 9, 9, 0.233)
+}
+
+.suporte-form button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-top: 15px;
+}
+
+.suporte-form button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.suporte-form button:active {
+    transform: translateY(-1px);
+}
+.listar{
+	justify-content: center;
+	flex-direction: column;
+}
