@@ -51,6 +51,7 @@ public class ServletControlador extends HttpServlet {
 			d.setCargaHorariaDisciplina(request.getParameter("cargaHorariaDisciplina"));
 			d.setFaltasDisciplina(request.getParameter("faltasDisciplina"));
 			sistema.adicionar(d);
+			//adiciona na lista todas variaveis acima. 
 
 			request.setAttribute("lista", sistema.listarDisciplinas());
 			resposta = "listaDisciplinas.jsp";

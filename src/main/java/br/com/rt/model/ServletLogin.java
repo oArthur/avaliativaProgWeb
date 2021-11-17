@@ -43,7 +43,10 @@ public class ServletLogin extends HttpServlet {
 			
 			response.sendRedirect(request.getContextPath()+ "/menu.jsp");
 		} else {
-			resposta.write("Senha ou usuario incorretos.");
+			resposta.write("Senha ou usuario incorretos. <br>");
+			resposta.write("<a href=\"autentica.jsp\">Clique aqui para tentar novamente!</a>");
+			
+			//caso a senha esteja errada o usuario sera redirecionado para esta tela onde sera informado que o login esta incorreto e podera tentar denovo.
 		}
 		
 		resposta.write("</body></html>");

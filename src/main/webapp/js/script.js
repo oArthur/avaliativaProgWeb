@@ -2,7 +2,7 @@ function validaNumero(value) {
     //verifica se o campo está vazio
     if (value.trim() !== "") {
         var regra = /^[0-9]+$/;
-        //verifica se o valor do campo é um número.
+        //verifica se o valor do campo é um número inteiro.
         if (value.match(regra)) {
             //verifica se o valor esta de acordo com a regra.
             document.getElementById("notaDisciplina").className = document.getElementById("notaDisciplina").className.replace(" error", "");
